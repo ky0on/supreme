@@ -3,7 +3,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-import os, sys
+import os
+import sys
 from math import sin, cos
 
 import supreme
@@ -15,11 +16,11 @@ if len(sys.argv) > 1:
     images = [supreme.io.imread(f) for f in sys.argv[1:]]
     tf_matrices = [np.eye(3) for n in range(len(images))]
 else:
-    images = ['NASA/hubble_crop.jpg','NASA/hubble_crop_rot5.jpg']
-    images = [supreme.io.imread(os.path.join(data_path,fn), flatten=True)
+    images = ['data/chelsea.jpg', 'data/chelsea_rot2.jpg']
+    images = [supreme.io.imread(os.path.join(data_path, fn), flatten=True)
               for fn in images]
 
-    theta = 5/180.*np.pi
+    theta = 5 / 180. * np.pi
     tf_matrices = [np.array([[1., 0., 0.],
                              [0., 1., 0.],
                              [0., 0., 1.]]),
