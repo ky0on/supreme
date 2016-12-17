@@ -20,12 +20,12 @@ else:
               for fn in images]
 
     theta = 5/180.*np.pi
-    tf_matrices = [np.array([[1,0,0],
-                             [0,1,0],
-                             [0,0,1]]),
-                   np.array([[cos(theta),-sin(theta),0],
-                             [sin(theta),cos(theta),0],
-                             [0,0,1]])]
+    tf_matrices = [np.array([[1., 0., 0.],
+                             [0., 1., 0.],
+                             [0., 0., 1.]]),
+                   np.array([[cos(theta), -sin(theta), 0.],
+                             [sin(theta), cos(theta), 0.],
+                             [0., 0., 1.]])]
 
 out = register.stack.with_transform(images, tf_matrices)
 if out.ndim == 3 and out.shape[2] == 4:
