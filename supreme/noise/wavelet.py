@@ -2,7 +2,7 @@ __all__ = ['dwt_denoise']
 
 import numpy as np
 
-from supreme.lib import pywt
+import pywt
 
 def _denoise_band(X, wavelet, levels, alpha):
     from var_est import variance

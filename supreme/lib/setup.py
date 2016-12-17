@@ -8,7 +8,6 @@ def configuration(parent_package='', top_path=None):
     config.add_subpackage('fast')
     config.add_subpackage('klt')
     config.add_subpackage('nurbs')
-    config.add_subpackage('pywt')
 
     return config
 
